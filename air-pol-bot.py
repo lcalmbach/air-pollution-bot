@@ -65,12 +65,12 @@ def main():
                     print(text)
                     params[param]['last_tweet'] = datetime.now()
                     api.update_status(text) #comment for testing
-                    print(f"{datetime.now()} Tweet has been sent") # uncomment for testing
+                    print(f"{datetime.now().strftime('%Y-%m-%d %H:%M')} Tweet has been sent") # uncomment for testing
                     # linux server is 2 hours ahead
                 except Exception as ex:
                     print(f"{datetime.now()} {ex}")
             else:
-                print(f"{datetime.now()} no exceedances found for {param}")    
+                print(f"{datetime.now()} no exceedances found for {param}. Value = {data[0][param]}, threshold = {params[param]['guideline']}")     
         time.sleep(INTERVAL)
 
 if __name__ == "__main__":
