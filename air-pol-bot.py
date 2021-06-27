@@ -18,8 +18,8 @@ url_ogdbs_today = f"https://data.bs.ch/explore/dataset/100049/table/?sort=datum_
 url_values = f"https://data.bs.ch/api/records/1.0/search/?dataset=100049&q=datum_zeit%3A%5B{yesterday}T22%3A00%3A00Z+TO+{today}T21%3A59%3A59Z%5D&rows=24&sort=datum_zeit&facet=datum_zeit"
 
 params = {}
-params['pm2_5_stundenmittelwerte_ug_m3'] = {'guideline':10, 'text': "⚠️ Hohe Feinstaub 2.5μm Konzentration in Basel: {} μg/m3. Grenzw. jährliches Mittel=10μg/m3. Alle Daten unter @OpenDataBS: {}",'last_tweet':(datetime.now() - timedelta(1))}
-params['pm10_stundenmittelwerte_ug_m3'] = {'guideline':20, 'text': "⚠️ Hohe Feinstaub 10μm Konzentration in Basel: {} μg/m3. Grenzw. jährliches Mittel=25μg/m3. Alle Daten unter @OpenDataBS: {}",'last_tweet':(datetime.now() - timedelta(1))}
+params['pm2_5_stundenmittelwerte_ug_m3'] = {'guideline':20, 'text': "⚠️ Hohe Feinstaub 2.5μm Konzentration in Basel: {} μg/m3. Grenzw. jährliches Mittel=20μg/m3. Alle Daten unter @OpenDataBS: {}",'last_tweet':(datetime.now() - timedelta(1))}
+params['pm10_stundenmittelwerte_ug_m3'] = {'guideline':50, 'text': "⚠️ Hohe Feinstaub 10μm Konzentration in Basel: {} μg/m3. Grenzw. jährliches Mittel=50μg/m3. Alle Daten unter @OpenDataBS: {}",'last_tweet':(datetime.now() - timedelta(1))}
 params['o3_stundenmittelwerte_ug_m3'] = {'guideline':120, 'text': "⚠️ Hohe Ozon Konzentration in Basel: {} μg/m3. Grenzw. jährliches Mittel=120μg/m3. Alle Daten unter @OpenDataBS: {}",'last_tweet':(datetime.now() - timedelta(1))}
 
 auth = tweepy.OAuthHandler(cn.CONSUMER_KEY, cn.CONSUMER_SECRET)
